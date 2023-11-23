@@ -20,7 +20,7 @@ export default function App() {
       <div className="relative z-0">
         <div className={`${styles.bgHero}`}>
           <img
-            src="/src/assets/Vector.png"
+            src="/src/assets/vector.png"
             alt="vector"
             className="absolute object-contain"
           />
@@ -30,7 +30,7 @@ export default function App() {
         </div>
         <section id="work" className={`${styles.bgExperience}`}>
           <img
-            src="/src/assets/Experiences.png"
+            src="/src/assets/experiences.png"
             alt=""
             className="absolute right-0 top-0"
           />
