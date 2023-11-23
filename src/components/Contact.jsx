@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { avatar } from "../../public/static/images";
 
 const Contact = () => {
   return (
@@ -40,7 +41,7 @@ const Contact = () => {
             <div className="relative">
               <img
                 className="w-[95px] h-[100px] sm:w-[115px] sm:h-[120px] rounded-full"
-                src="./public/img/avatar.png"
+                src={avatar}
                 alt="dhea ramdani"
               />
               <span className={styles.elementRocket}>🚀</span>

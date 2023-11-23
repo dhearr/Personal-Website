@@ -5,6 +5,7 @@ import { navLinks } from "../constants";
 import { menu, close } from "../assets";
 import { motion } from "framer-motion";
 import { navVariant } from "../utils/motion";
+import { avatar } from "../../public/static/images";
 
 export default function Navbar() {
   const [active, setActive] = useState("");
@@ -146,7 +147,7 @@ export default function Navbar() {
             <li className="mt-4">
               <img
                 className="w-[50px] h-[50px] rounded-full"
-                src="./public/img/avatar.png"
+                src={avatar}
                 alt="dhea ramdani"
               />
             </li>
