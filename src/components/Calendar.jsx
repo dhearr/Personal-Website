@@ -72,7 +72,7 @@ const Calendar = () => {
         <div className={styles.borderHeadCalendar}>
           <div className={styles.bgHeadCalendar}>
             <h1 className={styles.textCalendar}>Total</h1>
-            <p className={styles.subTextCalendar}>68</p>
+            <p className={styles.subTextCalendar}>70</p>
           </div>
         </div>
         <div className={styles.borderHeadCalendar}>
