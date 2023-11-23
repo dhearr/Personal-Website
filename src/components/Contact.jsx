@@ -40,7 +40,7 @@ const Contact = () => {
             <div className="relative">
               <img
                 className="w-[95px] h-[100px] sm:w-[115px] sm:h-[120px] rounded-full"
-                src="../src/assets/web.png"
+                src="./src/assets/avatar.png"
                 alt="dhea ramdani"
               />
               <span className={styles.elementRocket}>🚀</span>
