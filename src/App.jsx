@@ -1,6 +1,11 @@
 import { BrowserRouter } from "react-router-dom";
 import { styles } from "./styles";
-import { vector } from "../public/static/images";
+import {
+  vector,
+  bgexperience,
+  bgtech,
+  experiences,
+} from "../public/static/images";
 
 import {
   About,
@@ -26,16 +31,12 @@ export default function App() {
           <About />
         </div>
         <section id="work" className={`${styles.bgExperience}`}>
-          <img
-            src="./public/img/experiences.png"
-            alt=""
-            className="absolute right-0 top-0"
-          />
+          <img src={experiences} alt="" className="absolute right-0 top-0" />
           <Titleexperience />
           <div className={`${styles.borderExperience}`}>
             <div className={`${styles.warpExperience}`}>
               <img
-                src="./public/img/bgexperience.png"
+                src={bgexperience}
                 alt="wokr-tech"
                 className="absolute hidden sm:block bottom-0 object-contain"
               />
@@ -47,7 +48,7 @@ export default function App() {
           <div className={`${styles.borderProject}`}>
             <div className={`${styles.warpProject}`}>
               <img
-                src="./public/img/bgtech.png"
+                src={bgtech}
                 alt="wokr-tech"
                 className="absolute right-0 bottom-0 object-contain"
               />
