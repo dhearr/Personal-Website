@@ -146,7 +146,7 @@ export default function Navbar() {
             <li className="mt-4">
               <img
                 className="w-[50px] h-[50px] rounded-full"
-                src="../src/assets/logo.svg"
+                src="./public/img/avatar.png"
                 alt="dhea ramdani"
               />
             </li>
