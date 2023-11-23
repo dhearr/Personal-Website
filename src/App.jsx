@@ -38,7 +38,7 @@ export default function App() {
           <div className={`${styles.borderExperience}`}>
             <div className={`${styles.warpExperience}`}>
               <img
-                src="/src/assets/work-experience.png"
+                src="/src/assets/bgexperience.png"
                 alt="wokr-tech"
                 className="absolute hidden sm:block bottom-0 object-contain"
               />
@@ -50,7 +50,7 @@ export default function App() {
           <div className={`${styles.borderProject}`}>
             <div className={`${styles.warpProject}`}>
               <img
-                src="/src/assets/work-tech.png"
+                src="/src/assets/bgtech.png"
                 alt="wokr-tech"
                 className="absolute right-0 bottom-0 object-contain"
               />
