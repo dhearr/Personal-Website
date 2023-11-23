@@ -72,7 +72,7 @@ const Calendar = () => {
         <div className={styles.borderHeadCalendar}>
           <div className={styles.bgHeadCalendar}>
             <h1 className={styles.textCalendar}>Total</h1>
-            <p className={styles.subTextCalendar}>70</p>
+            <p className={styles.subTextCalendar}>81</p>
           </div>
         </div>
         <div className={styles.borderHeadCalendar}>
@@ -96,7 +96,7 @@ const Calendar = () => {
             username="dhearr"
             showWeekdayLabels
             labels={{
-              totalCount: "Learn how we count contributions",
+              totalCount: "{{count}} Contributions in the last half year",
             }}
             blockSize={18}
           />

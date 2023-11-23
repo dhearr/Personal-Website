@@ -49,8 +49,10 @@ const About = () => {
         className="mt-4 text-[#000000] text-[17px] max-w-3xl leading-[30px]"
       >
         I am a junior frontend developer, I have mastered front-end technologies
-        such as HTML , CSS, and JavaScript, I am experienced in developing
-        responsive web interfaces.
+        such as HTML, CSS, and JavaScript, I am experienced in developing
+        responsive web interfaces. This portfolio website was created with
+        React, Framer Motion, and Three JS technology. I am currently learning
+        to use other front-end libraries to develop my skills.
       </motion.p>
 
       <div className="mt-14 flex flex-wrap gap-10">
