@@ -20,7 +20,7 @@ export default function App() {
       <div className="relative z-0">
         <div className={`${styles.bgHero}`}>
           <img
-            src="/src/assets/vector.png"
+            src="../src/assets/vector.png"
             alt="vector"
             className="absolute object-contain"
           />
@@ -30,7 +30,7 @@ export default function App() {
         </div>
         <section id="work" className={`${styles.bgExperience}`}>
           <img
-            src="/src/assets/experiences.png"
+            src="../src/assets/experiences.png"
             alt=""
             className="absolute right-0 top-0"
           />
@@ -38,7 +38,7 @@ export default function App() {
           <div className={`${styles.borderExperience}`}>
             <div className={`${styles.warpExperience}`}>
               <img
-                src="/src/assets/bgexperience.png"
+                src="../src/assets/bgexperience.png"
                 alt="wokr-tech"
                 className="absolute hidden sm:block bottom-0 object-contain"
               />
@@ -50,7 +50,7 @@ export default function App() {
           <div className={`${styles.borderProject}`}>
             <div className={`${styles.warpProject}`}>
               <img
-                src="/src/assets/bgtech.png"
+                src="../src/assets/bgtech.png"
                 alt="wokr-tech"
                 className="absolute right-0 bottom-0 object-contain"
               />

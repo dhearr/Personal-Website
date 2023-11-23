@@ -6,7 +6,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-import avatar from "./avatar.jpg";
+import avatar from "./avatar.png";
 import bgtech from "./bgtech.png";
 import bgexperience from "./bgexperience.png";
 import vector from "./vector.png";
