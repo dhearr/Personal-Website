@@ -22,25 +22,33 @@ const Contact = () => {
           </h3>
         </motion.div>
 
-        <motion.div
-          variants={fadeIn("", "", 0.1, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.35 }}
-          className="mt-10"
-        >
-          <h1 className={`${styles.textSlug} text-[#CFFAFE]`}>
+        <div className="mt-10">
+          <motion.h1
+            variants={fadeIn("up", "spring", 1, 1)}
+            className={`${styles.textSlug} text-[#CFFAFE] font-bold`}
+          >
             Suka ngoding, mau ngoding bareng?
-            <br />
+          </motion.h1>
+          <motion.h1
+            variants={fadeIn("up", "spring", 1.15, 1)}
+            className={`${styles.textSlug} text-[#CFFAFE] font-bold`}
+          >
             Have any project ideas?
-            <br />
+          </motion.h1>
+          <motion.h1
+            variants={fadeIn("up", "spring", 1.25, 1)}
+            className={`${styles.textSlug} text-[#CFFAFE] font-bold`}
+          >
             Ask something?
-          </h1>
+          </motion.h1>
 
-          <div className={styles.warpElementContact}>
+          <motion.div
+            variants={fadeIn("", "", 1.75, 1)}
+            className={styles.warpElementContact}
+          >
             <div className="relative">
               <img
-                className="w-[95px] h-[100px] sm:w-[115px] sm:h-[120px] rounded-full"
+                className="w-[80px] h-[85px] sm:w-[115px] sm:h-[120px] rounded-full"
                 src={avatar}
                 alt="dhea ramdani"
               />
@@ -90,7 +98,7 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
           <footer className="mt-36 text-[18px] text-[#0E7490]">
             <p>
               Made with React and this design follows
@@ -104,7 +112,7 @@ const Contact = () => {
               Figma design but there are several changes.
             </p>
           </footer>
-        </motion.div>
+        </div>
       </div>
     </>
   );
