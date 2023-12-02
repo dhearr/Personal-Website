@@ -19,6 +19,7 @@ import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
 import framer from "./tech/framer.png";
+import nextjs from "./tech/nextjs.png";
 
 import bpptik from "./company/bpptik.png";
 import aqua from "./company/aqua.png";
@@ -28,6 +29,7 @@ import dblogspot from "./dblogspot.png";
 import catatan from "./catatan.png";
 import game from "./game.png";
 import portfolio from "./portfolio.png";
+import Cretivox from "./Cretivox.png";
 
 export {
   logo,
@@ -57,4 +59,6 @@ export {
   game,
   portfolio,
   framer,
+  nextjs,
+  Cretivox,
 };

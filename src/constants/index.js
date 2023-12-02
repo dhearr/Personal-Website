@@ -22,6 +22,8 @@ import {
   portfolio,
   threejs,
   framer,
+  nextjs,
+  Cretivox,
 } from "../assets";
 
 export const navLinks = [
@@ -242,6 +244,31 @@ const projects = [
       },
     ],
     image: portfolio,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Cretivox",
+    description:
+      "working on endurance test for creivox internship as front-end developer, creating API project to show all products and product details, this app create with nextjs and reactjs.",
+    tags: [
+      {
+        name: "react",
+        image: reactjs,
+      },
+      {
+        name: "nextjs",
+        image: nextjs,
+      },
+      {
+        name: "tailwind",
+        image: tailwind,
+      },
+      {
+        name: "figma",
+        image: figma,
+      },
+    ],
+    image: Cretivox,
     source_code_link: "https://github.com/",
   },
 ];
