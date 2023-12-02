@@ -6,6 +6,7 @@ import { menu, close } from "../assets";
 import { motion } from "framer-motion";
 import { navVariant } from "../utils/motion";
 import { avatar } from "../../public/static/images";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [active, setActive] = useState("");
@@ -98,6 +99,8 @@ export default function Navbar() {
     transition: "background 0.5s ease-in-out",
   };
 
+  const navigate = useNavigate();
+
   return (
     <>
       <motion.nav
@@ -111,7 +114,7 @@ export default function Navbar() {
           className={` ${styles.navbarStyle} hidden lg:flex`}
           style={navbarStyle}
         >
-          <ul className="list-none hidden sm:flex flex-row gap-[38px] text-[18px]">
+          <ul className="list-none hidden sm:flex flex-row gap-[40px] text-[18px]">
             {navLinks.map((link) => (
               <li
                 key={link.id}
@@ -124,6 +127,12 @@ export default function Navbar() {
                 <a href={`#${link.id}`}>{link.title}</a>
               </li>
             ))}
+            <li
+              onClick={() => navigate("/blogs")}
+              className="cursor-pointer opacity-30 font-medium"
+            >
+              🔥blog
+            </li>
           </ul>
         </div>
       </motion.nav>
@@ -182,6 +191,14 @@ export default function Navbar() {
               }}
             >
               <a href="#contact">Contact me</a>
+            </li>
+            <li
+              className="mt-5 cursor-pointer mb-5"
+              onClick={() => {
+                setToggle(!toggle);
+              }}
+            >
+              <a href="/blogs">🔥Blog</a>
             </li>
           </ul>
         </motion.div>

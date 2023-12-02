@@ -55,7 +55,7 @@ const styles = {
   textSlug:
     "text-[#032234] lg:text-[80px] sm:text-[60px] xs:text-[45px] text-[29px] font-black lg:leading-[80px] xs:leading-[50px] sm:leading-[70px] leading-[40px]",
   navbarStyle:
-    "w-full flex justify-between sm:justify-center items-center max-w-7xl sm:max-w-md mx-auto bg-transparent sm:backdrop-filter sm:backdrop-blur-2xl sm:shadow-lg hover:sm:shadow-[#000]/50 hover:sm:shadow-2xl text-slate-600/50  p-3 rounded-none sm:rounded-full sm:bg-white/10",
+    "w-full flex justify-between sm:justify-center items-center max-w-7xl sm:max-w-xl mx-auto bg-transparent sm:backdrop-filter sm:backdrop-blur-2xl sm:shadow-lg hover:sm:shadow-[#000]/50 hover:sm:shadow-2xl text-slate-600/50  p-3 rounded-none sm:rounded-full sm:bg-white/10",
   buttonScroll:
     "w-[25px] h-[50px] rounded-3xl border-2 border-secondary flex justify-center items-start p-2",
 
