@@ -194,9 +194,7 @@ export default function Navbar() {
             </li>
             <li
               className="mt-5 cursor-pointer mb-5"
-              onClick={() => {
-                setToggle(!toggle);
-              }}
+              onClick={() => navigate("/blogs")}
             >
               <a href="/blogs">🔥Blog</a>
             </li>
