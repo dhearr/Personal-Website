@@ -177,7 +177,7 @@ const projects = [
       },
     ],
     image: dblogspot,
-    source_code_link: "https://github.com/dhearr",
+    source_code_link: "https://github.com/dhearr/blogspot.git",
   },
   {
     name: "App-Catatan",
@@ -198,7 +198,7 @@ const projects = [
       },
     ],
     image: catatan,
-    source_code_link: "https://github.com/dhearr",
+    source_code_link: "https://github.com/dhearr/app-catatan.git",
   },
   {
     name: "Suwit Game",
@@ -219,7 +219,8 @@ const projects = [
       },
     ],
     image: game,
-    source_code_link: "https://github.com/dhearr",
+    source_code_link:
+      "https://github.com/dhearr/learn_javascript_gameSuit_V2.git",
   },
   {
     name: "My Portfolio",
@@ -244,7 +245,7 @@ const projects = [
       },
     ],
     image: portfolio,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/dhearr/Personal-Website.git",
   },
   {
     name: "Cretivox",
@@ -269,7 +270,7 @@ const projects = [
       },
     ],
     image: Cretivox,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/dhearr/cretivox.git",
   },
 ];
 
