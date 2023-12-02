@@ -196,7 +196,7 @@ export default function Navbar() {
               className="mt-5 cursor-pointer mb-5"
               onClick={() => navigate("/blogs")}
             >
-              <a href="/blogs">🔥Blog</a>
+              🔥Blog
             </li>
           </ul>
         </motion.div>
