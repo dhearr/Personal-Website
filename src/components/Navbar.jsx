@@ -127,7 +127,7 @@ export default function Navbar() {
                 <a href={`#${link.id}`}>{link.title}</a>
               </li>
             ))}
-            <Link to="/blogs" as="/blogs">
+            <Link to="/Blogs" as="/Blogs">
               <li className="cursor-pointer opacity-30 font-medium">🔥blog</li>
             </Link>
           </ul>
