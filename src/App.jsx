@@ -80,7 +80,7 @@ export default function App() {
           }
         />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="blogs/:blogId" element={<Details />} />
+        <Route path="/blogs/:blogId" element={<Details />} />
       </Routes>
     </Router>
   );
