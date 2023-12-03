@@ -3,7 +3,8 @@ const styles = {
   paddingY: "sm:py-16 py-6",
   padding: "sm:px-16 px-6 py-[100px]",
 
-  bgHero: "bg-gradient-to-b from-[#B3DDEB] from-10% to-[#E3F5FB] relative",
+  bgHero:
+    "bg-white bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] relative z-10",
   bgExperience:
     "bg-gradient-to-b from-[#03222C] from-100%  to-[#400C1C] py-0 px-0 sm:py-28 sm:px-10 relative",
   borderExperience:

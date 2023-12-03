@@ -8,7 +8,7 @@ export default function Hero() {
       <div
         className={`${styles.paddingX} max-w-7xl mx-auto flex flex-row items-start pt-24`}
       >
-        <div className="flex flex-col justify-center items-center mt-5 mr-3">
+        <div className="flex flex-col justify-center items-center mt-5 mr-3 relative z-10">
           <motion.div
             variants={textVariant()}
             initial="hidden"
@@ -36,6 +36,7 @@ export default function Hero() {
           </p>
         </div>
       </div>
+      <div className="bg-gradient-to-b from-[#B3DDEB] to-transparent w-full h-full absolute top-0 left-0 z-0"></div>
     </section>
   );
 }

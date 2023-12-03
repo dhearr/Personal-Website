@@ -1,11 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { styles } from "./styles";
-import {
-  vector,
-  bgexperience,
-  bgtech,
-  experiences,
-} from "../public/static/images";
+import { bgexperience, bgtech, experiences } from "../public/static/images";
 
 import {
   About,
@@ -31,11 +26,6 @@ export default function App() {
           element={
             <div className="relative z-0">
               <div className={`${styles.bgHero}`}>
-                <img
-                  src={vector}
-                  alt="vector"
-                  className="absolute object-contain"
-                />
                 <Navbar />
                 <Hero />
                 <About />
