@@ -79,7 +79,7 @@ export default function App() {
             </div>
           }
         />
-        <Route path="/Blogs" element={<Blogs />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:blogId" element={<Details />} />
       </Routes>
     </Router>
