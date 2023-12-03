@@ -6,7 +6,7 @@ import { menu, close } from "../assets";
 import { motion } from "framer-motion";
 import { navVariant } from "../utils/motion";
 import { avatar } from "../../public/static/images";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [active, setActive] = useState("");
@@ -127,12 +127,9 @@ export default function Navbar() {
                 <a href={`#${link.id}`}>{link.title}</a>
               </li>
             ))}
-            <li
-              onClick={() => navigate("/blogs")}
-              className="cursor-pointer opacity-30 font-medium"
-            >
-              🔥blog
-            </li>
+            <Link to="/blogs" as="/blogs">
+              <li className="cursor-pointer opacity-30 font-medium">🔥blog</li>
+            </Link>
           </ul>
         </div>
       </motion.nav>

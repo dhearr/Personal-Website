@@ -18,7 +18,7 @@ const Blog = () => {
           become an expert in the field of software engineering and front-end
           developer
         </p>
-        <Link to="/">
+        <Link to="/" as="/">
           <p className="mt-4 underline sm:text-[16px] text-[12px] underline-offset-4 z-10 relative text-indigo-400">
             Full Profile
           </p>
