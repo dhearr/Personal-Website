@@ -26,7 +26,7 @@ const Blog = () => {
         <div className="bg-gradient-to-b from-slate-800 via-transparent to-slate-950 w-full h-full absolute top-0 left-0 z-0"></div>
       </section>
       <section className="pt-[1px] bg-gradient-to-l from-slate-950 via-slate-800 to-slate-950 to-60%">
-        <div className="bg-slate-950 flex flex-col sm:grid sm:grid-cols-2 gap-5 px-6 py-16 sm:px-20 sm:py-12 md:px-44 md:py-16 h-screen">
+        <div className="bg-slate-950 flex flex-col sm:grid sm:grid-cols-2 gap-5 px-6 py-16 sm:px-20 sm:py-12 md:px-44 md:py-16">
           {blogs.map((blog) => (
             <div key={blog.id} className="max-w-sm mb-4">
               <h5 className="mb-2 text-xs opacity-60 text-indigo-300">

@@ -2,15 +2,13 @@
 import { useEffect, useState } from "react";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { menu, close } from "../assets";
 import { motion } from "framer-motion";
 import { navVariant } from "../utils/motion";
-import { avatar } from "../../public/static/images";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Menu from "./Menu";
 
 export default function Navbar() {
   const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
   const handleScrollLink = () => {
@@ -81,25 +79,11 @@ export default function Navbar() {
     }
   };
 
-  const menuVars = {
-    initial: {
-      scaleY: 0,
-    },
-    animate: {
-      scaleY: 1,
-    },
-    exit: {
-      scaleY: 0,
-    },
-  };
-
   const navbarStyle = {
     background: getNavbarBackgroundColor(activeSection),
     color: getNavbarTextColor(activeSection),
     transition: "background 0.5s ease-in-out",
   };
-
-  const navigate = useNavigate();
 
   return (
     <>
@@ -133,71 +117,7 @@ export default function Navbar() {
           </ul>
         </div>
       </motion.nav>
-      <div className="block lg:hidden fixed z-[9999] w-full p-2">
-        <div className="flex justify-end w-full">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[40px] h-[40px] object-contain cursor-pointer absolute mt-5 mr-3"
-            onClick={() => setToggle(!toggle)}
-          />
-        </div>
-        <motion.div
-          variants={menuVars}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          className={`${!toggle ? "hidden" : "flex"} bg-cyan-50 rounded-xl`}
-        >
-          <ul className="ml-5 text-[#0E7490] font-semibold">
-            <li className="mt-4">
-              <img
-                className="w-[50px] h-[50px] rounded-full"
-                src={avatar}
-                alt="dhea ramdani"
-              />
-            </li>
-            <li
-              className="mt-5 cursor-pointer"
-              onClick={() => {
-                setToggle(!toggle);
-              }}
-            >
-              <a href="#about">About</a>
-            </li>
-            <li
-              className="mt-5 cursor-pointer"
-              onClick={() => {
-                setToggle(!toggle);
-              }}
-            >
-              <a href="#work">Work Experience</a>
-            </li>
-            <li
-              className="mt-5 cursor-pointer"
-              onClick={() => {
-                setToggle(!toggle);
-              }}
-            >
-              <a href="#project">Project</a>
-            </li>
-            <li
-              className="mt-5 cursor-pointer mb-5"
-              onClick={() => {
-                setToggle(!toggle);
-              }}
-            >
-              <a href="#contact">Contact me</a>
-            </li>
-            <li
-              className="mt-5 cursor-pointer mb-5"
-              onClick={() => navigate("/blogs")}
-            >
-              🔥Blog
-            </li>
-          </ul>
-        </motion.div>
-      </div>
+      <Menu />
     </>
   );
 }

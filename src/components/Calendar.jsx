@@ -95,9 +95,7 @@ const Calendar = () => {
             transformData={selectLastHalfYear}
             username="dhearr"
             showWeekdayLabels
-            labels={{
-              totalCount: "{{count}} Contributions in the last half year",
-            }}
+            hideTotalCount
             blockSize={18}
           />
         </div>

@@ -2,8 +2,8 @@ import { Link, useParams } from "react-router-dom";
 import { blogs } from "../data";
 
 const Detail = () => {
-  const { blogId } = useParams();
-  const blog = blogs.find((blog) => blog.id === blogId);
+  const { id } = useParams();
+  const blog = blogs.find((blog) => blog.id === id);
   const {
     data,
     date,

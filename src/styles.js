@@ -16,7 +16,7 @@ const styles = {
   borderProject:
     "bg-gradient-to-br from-[#881337] via-transparent to-[#881337] pt-[3px] sm:p-[2px] rounded-none sm:rounded-3xl",
   wrapperCalendar:
-    "max-w-7xl flex justify-start items-start rounded-lg bg-gradient-to-br from-zinc-950 via-rose-950 to-zinc-950 p-4",
+    "max-w-7xl flex justify-start items-start rounded-lg bg-gradient-to-br from-zinc-950 via-rose-950 to-zinc-950 p-4 relative",
   borderCalendar:
     "p-[1px] bg-gradient-to-br from-[#881337] via-transparent to-[#881337] mt-5 rounded-lg",
 

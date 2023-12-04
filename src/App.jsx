@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { styles } from "./styles";
 import { bgexperience, bgtech, experiences } from "../public/static/images";
-
 import {
   About,
   Contact,
@@ -9,7 +8,6 @@ import {
   Titleexperience,
   Hero,
   Navbar,
-  Tech,
   Works,
   StarsCanvas,
 } from "./components";
@@ -58,7 +56,6 @@ export default function App() {
                     />
                     <Works />
                     <Calendar />
-                    <Tech />
                   </div>
                 </div>
               </section>
@@ -70,7 +67,7 @@ export default function App() {
           }
         />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blogs/:blogId" element={<Details />} />
+        <Route path="/blogs/:id" element={<Details />} />
       </Routes>
     </Router>
   );

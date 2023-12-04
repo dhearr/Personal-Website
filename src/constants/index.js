@@ -45,6 +45,25 @@ export const navLinks = [
   },
 ];
 
+export const menuLinks = [
+  {
+    id: "about",
+    title: "About",
+  },
+  {
+    id: "work",
+    title: "Work Experience",
+  },
+  {
+    id: "project",
+    title: "My project",
+  },
+  {
+    id: "contact",
+    title: "Contact me",
+  },
+];
+
 const services = [
   {
     title: "Web Developer",

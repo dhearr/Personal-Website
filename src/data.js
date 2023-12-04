@@ -34,6 +34,18 @@ const blogs = [
     footer:
       "Terimakasih sudah membaca blog saya, sampai jumpa di blog selanjutnya...",
   },
+  {
+    id: "3",
+    data: "data",
+    date: "Senin, 4 Des 2023",
+    title: "Belajar tentang apa itu Rest API",
+    paragrap1:
+      "Hari ini saya sedang belajar apa itu Rest API dan juga belajr JSON, kenapa saya belajar materi ini, karena menurut saya ini sangat menting untuk saya sebagai seorang front-end developer, banyak hal menarik ketika saya sedang beljar materi ini, karena di dalam materi ini kita belajar cara mengolah sebuah data dan mengambil data dari server untuk bisa kita tampilkan ke halaman depan. ",
+    paragrap2:
+      "Disini saya tidak bisa menyebutkan semuanya tentang apa yang sedang saya pelajari saat ini, intinya jika kalian ingin sama belajar tentang apa itu Rest API dan JSON, kalian bisa kunjungi saja Youtube chanel nya WPU, kalian bisa cek <a href='https://youtube.com/playlist?list=PLFIM0718LjIW7AsIbnhFg15t9yx4H-sQ0&si=cMzaAk2I0jTOfeLH' target='blank' class='font-semibold text-sky-500 hover:underline'>disini</a>",
+    footer:
+      "Terimakasih sudah membaca blog saya, sampai jumpa di blog selanjutnya...",
+  },
 ];
 
 export { blogs };

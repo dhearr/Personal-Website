@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unknown-property */
-/* eslint-disable react/prop-types */
 /* eslint-disable react-refresh/only-export-components */
 import { motion } from "framer-motion";
 import { styles } from "../styles";
