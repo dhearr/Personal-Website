@@ -68,7 +68,7 @@ const Detail = () => {
       </section>
       <section className="pt-[2px] bg-gradient-to-l from-slate-950 from-20% via-slate-800 to-slate-950 to-80%">
         <div className="bg-slate-950 px-6 py-16 sm:px-20 sm:py-12 md:px-44 md:py-16">
-          <div className="flex justify-center py-16 px-4">
+          <div className="flex justify-center py-8 px-4">
             <article className="mx-auto space-y-5 text-indigo-100 leading-7">
               <p
                 className="max-w-2xl"

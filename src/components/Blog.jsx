@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { blogs } from "../data";
+import { styles } from "../styles";
 const Blog = () => {
   return (
     <>
-      <section className="bg-slate-950 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')] p-6 sm:px-20 sm:py-12 md:px-44 md:py-16 w-full z-10 relative">
+      <section className={styles.headerBlog}>
         <h1 className="sm:text-[60px] text-[35px] font-black z-10 relative">
           <span className="relative inline-block px-[2px]">
             <div className="absolute inset-0 transform -skew-y-[3deg] h-3 top-[30px] sm:top-[58px] bg-gradient-to-r from-indigo-300/70"></div>
@@ -26,7 +27,7 @@ const Blog = () => {
         <div className="bg-gradient-to-b from-slate-800 via-transparent to-slate-950 w-full h-full absolute top-0 left-0 z-0"></div>
       </section>
       <section className="pt-[1px] bg-gradient-to-l from-slate-950 via-slate-800 to-slate-950 to-60%">
-        <div className="bg-slate-950 flex flex-col sm:grid sm:grid-cols-2 gap-5 px-6 py-16 sm:px-20 sm:py-12 md:px-44 md:py-16">
+        <div className={styles.warpBlog}>
           {blogs.map((blog) => (
             <div key={blog.id} className="max-w-sm mb-4">
               <h5 className="mb-2 text-xs opacity-60 text-indigo-300">

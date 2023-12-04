@@ -3,6 +3,12 @@ const styles = {
   paddingY: "sm:py-16 py-6",
   padding: "sm:px-16 px-6 py-[100px]",
 
+  headerBlog:
+    "bg-slate-950 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')] p-6 sm:px-20 sm:py-12 md:px-44 md:py-16 w-full z-10 relative",
+
+  warpBlog:
+    "bg-slate-950 flex flex-col sm:grid sm:grid-cols-2 gap-5 px-6 py-16 sm:px-20 sm:py-12 md:px-44 md:py-16",
+
   bgHero:
     "bg-white bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] relative z-10",
   bgExperience:
