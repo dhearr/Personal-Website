@@ -3,6 +3,15 @@ const styles = {
   paddingY: "sm:py-16 py-6",
   padding: "sm:px-16 px-6 py-[100px]",
 
+  skeletonData:
+    "mb-2 animate-pulse bg-gray-300 h-2.5 w-8 rounded-full text-white/0",
+  skeletonDate:
+    "mb-5 animate-pulse bg-gray-300 h-3 w-40 rounded-full text-white/0",
+  skeletonTitle:
+    "mb-2 animate-pulse bg-gray-300 h-4 max-w-sm rounded-full text-white/0",
+  skeletonButton:
+    "animate-pulse bg-gray-300 h-2.5 w-32 rounded-full text-white/0",
+
   headerBlog:
     "bg-slate-950 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')] p-6 sm:px-20 sm:py-12 md:px-44 md:py-16 w-full z-10 relative",
 
