@@ -4,6 +4,9 @@ export default {
   mode: "jit",
   theme: {
     extend: {
+      fontFamily: {
+        rubik: ["Rubik Doodle Shadow"],
+      },
       colors: {
         primary: "#050816",
         secondary: "#aaa6c3",
@@ -22,7 +25,8 @@ export default {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/bg-hero.jpg')",
+        "hero-pattern": "url('/public/static/images/experiences.png')",
+        "hero-card": "url('/public/static/images/bgexperience.png')",
         "hero-work": "url('/src/assets/bg-work.jpg')",
         "hero-tech": "url('/src/assets/bg-tech-project.jpg')",
         "hero-contact": "url('/src/assets/bg-contact.jpg')",

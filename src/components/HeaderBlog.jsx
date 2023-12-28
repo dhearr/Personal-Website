@@ -19,9 +19,9 @@ const HeaderBlog = () => {
           become an expert in the field of software engineering and front-end
           developer
         </p>
-        <Link to="/">
+        <Link to="/home">
           <p className="mt-4 underline sm:text-[16px] text-[12px] underline-offset-4 z-10 relative text-indigo-400">
-            Full Profile
+            Back to menu
           </p>
         </Link>
         <div className="bg-gradient-to-b from-slate-800 via-transparent to-slate-950 w-full h-full absolute top-0 left-0 z-0"></div>

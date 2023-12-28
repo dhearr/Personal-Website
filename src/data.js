@@ -48,4 +48,45 @@ const blogs = [
   },
 ];
 
-export { blogs };
+const author = {
+  name: "DHEA RAMDANI",
+  title: "Front-end Developer",
+};
+
+const self = {
+  head: "I am a web developer from Ciamis, West Java, I have always been fascinated by technology and how it works, despite my educational background which is a graduate from the field of informatics engineering studies, I decided to pursue a career in web development, especially in the front-end developer.",
+  body: "As a web developer, especially a front-end developer, I love new challenges. I believe in every new challenge there will be an opportunity to learn new things to grow and develop.",
+};
+
+const experience = {
+  description:
+    "That is my career or work experience after graduating as a postgraduate student in the field of informatics engineering. Next I will pursue my dream and have a career as a front-end developer.",
+};
+
+const work = {
+  description:
+    "Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly describe with links to code repositories and live demos in it. It reflects my ability to solve complex problems, work with diferent technologies, and manage projects effectively.",
+};
+
+const contacts = {
+  description: [
+    {
+      title: "Suka ngoding, mau ngoding bareng?",
+    },
+    {
+      title: "Have any project ideas?",
+    },
+    {
+      title: "Ask something?",
+    },
+  ],
+  contact: [
+    {
+      title: "Contact me via",
+      email: "@dhearr27@gmail.com",
+      instagram: "@dherrrrrrrrrrrr",
+    },
+  ],
+};
+
+export { blogs, author, self, experience, work, contacts };
