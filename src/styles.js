@@ -24,7 +24,7 @@ const styles = {
 
   // Start Style About
   sectionDetail:
-    "sm:px-16 px-6 sm:py-16 py-6 bg-[#091F2A] bg-hero-pattern bg-cover overflow-hidden w-full transition-all duration-700",
+    "sm:px-16 px-6 sm:py-16 py-6 bg-[#091F2A] bg-hero-pattern bg-cover overflow-y-scroll w-full transition-all duration-700 h-screen",
   cardDetail:
     "max-w-3xl lg:max-w-4xl transition-all duration-700 mx-auto border border-[#113344] relative z-10 px-5 sm:px-10 pt-16 pb-10 rounded-lg bg-[#092531] shadow-xl",
   line: "h-1 w-12 tracking-wider leading-6 bg-[#0369a1] my-3 sm:my-5 border-0 rounded-full",
