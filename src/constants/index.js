@@ -39,7 +39,7 @@ const experiences = [
     title: "Junior Web Developer",
     company_name: "BPPTIK",
     date: "Juli 2023 - Agustus 2023",
-    points: "Create more efficient programs with PHP and MySQL.",
+    points: "Training and Certification.",
   },
 ];
 
