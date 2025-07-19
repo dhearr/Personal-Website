@@ -3,14 +3,10 @@ import { createContext, useContext, useState, useEffect } from "react";
 const LevelContext = createContext();
 
 export function LevelProvider({ children }) {
-  const [unlockedLevels, setUnlockedLevels] = useState(["easy"]);
-
-  useEffect(() => {
-    const saved = JSON.parse(
-      localStorage.getItem("unlockedLevels") || '["easy"]'
-    );
-    setUnlockedLevels(saved);
-  }, []);
+  const [unlockedLevels, setUnlockedLevels] = useState(() => {
+    const saved = localStorage.getItem("unlockedLevels");
+    return saved ? JSON.parse(saved) : ["easy"];
+  });
 
   useEffect(() => {
     localStorage.setItem("unlockedLevels", JSON.stringify(unlockedLevels));

@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { styles } from "../styles";
 import { FaLaravel, FaReact } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -7,35 +6,12 @@ import arrowLeft from "/src/assets/play.png";
 import { Link } from "react-router-dom";
 import { PiFinnTheHumanFill } from "react-icons/pi";
 import { useSoundManager } from "../utils/soundManager";
-import ModalLevelSelect from "../components/ModalLevelSelect";
-import ModalGameEasy from "../components/ModalGameEasy";
-import { useLevels } from "../utils/levelContext";
-// import ModalGameMedium, ModalGameHard, ModalGameExpert jika sudah ada nanti
+
+// 🆕 import GameGate
+import GameGate from "../components/GameGate";
 
 export default function About() {
   const { playAccent } = useSoundManager();
-
-  // 🔥 state untuk buka halaman
-  const [isUnlocked, setIsUnlocked] = useState(false);
-
-  // 🔥 state untuk level
-  const [showLevelModal, setShowLevelModal] = useState(true);
-  const [selectedLevel, setSelectedLevel] = useState(null);
-
-  // 🔥 daftar level yang kebuka
-  const { unlockedLevels, setUnlockedLevels } = useLevels();
-
-  // Simpan setiap kali berubah
-  useEffect(() => {
-    localStorage.setItem("unlockedLevels", JSON.stringify(unlockedLevels));
-  }, [unlockedLevels]);
-
-  useEffect(() => {
-    const saved = JSON.parse(
-      localStorage.getItem("unlockedLevels") || '["easy"]'
-    );
-    setUnlockedLevels(saved);
-  }, []);
 
   // data card
   const cards = [
@@ -53,62 +29,10 @@ export default function About() {
     },
   ];
 
-  // 🔥 fungsi jika berhasil di level tertentu
-  const handleSuccess = (level) => {
-    setSelectedLevel(null);
-    setIsUnlocked(true); // halaman About boleh tampil
-    setShowLevelModal(false);
-
-    // tambahkan level berikutnya ke unlockedLevels
-    if (level === "easy" && !unlockedLevels.includes("medium")) {
-      setUnlockedLevels((prev) => [...prev, "medium"]);
-    }
-    if (level === "medium" && !unlockedLevels.includes("hard")) {
-      setUnlockedLevels((prev) => [...prev, "hard"]);
-    }
-    if (level === "hard" && !unlockedLevels.includes("expert")) {
-      setUnlockedLevels((prev) => [...prev, "expert"]);
-    }
-  };
-
-  // 🔥 fungsi jika gagal (misalnya salah terus sampai habis kesempatan)
-  const handleFail = () => {
-    // tutup modal soal, balik ke modal pilih level
-    setSelectedLevel(null);
-    setShowLevelModal(true);
-    setIsUnlocked(false);
-  };
-
   return (
     <section className={styles.sectionDetail}>
-      {/* Modal pilih level */}
-      {showLevelModal && !selectedLevel && (
-        <ModalLevelSelect
-          onSelect={(level) => {
-            setSelectedLevel(level);
-            setShowLevelModal(false);
-          }}
-          unlockedLevels={unlockedLevels}
-        />
-      )}
-
-      {/* Modal Game */}
-      {selectedLevel === "easy" && (
-        <ModalGameEasy
-          onClose={handleFail}
-          onSuccess={() => handleSuccess("easy")}
-        />
-      )}
-      {/* Nanti kalau sudah ada modal Medium:
-      {selectedLevel === "medium" && (
-        <ModalGameMedium
-          onClose={handleFail}
-          onSuccess={() => handleSuccess("medium")}
-        />
-      )} */}
-
-      {/* Render konten About hanya jika sudah unlock */}
-      {isUnlocked && (
+      {/* 🎮 Bungkus konten About dengan GameGate */}
+      <GameGate>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -171,7 +95,7 @@ export default function About() {
             </div>
           </div>
         </motion.div>
-      )}
+      </GameGate>
     </section>
   );
 }

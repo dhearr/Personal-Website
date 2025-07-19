@@ -1,7 +1,9 @@
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
+import { useSoundManager } from "../utils/soundManager";
 
 const HeaderBlog = () => {
+  const { playAccent } = useSoundManager();
   return (
     <>
       <section className={styles.headerBlog}>
@@ -14,12 +16,12 @@ const HeaderBlog = () => {
         <h2 className="sm:text-[30px] text-[20px] font-bold mt-4 z-10 relative">
           Dhea Ramdani.
         </h2>
-        <p className="max-w-xl sm:text-[24px] text-[14px] z-10 relative text-indigo-100">
+        <p className="max-w-xl sm:text-[24px] text-[14px] leading-7 sm:leading-10 z-10 relative text-indigo-100">
           happy the world of programming, especially front end developer want to
           become an expert in the field of software engineering and front-end
           developer
         </p>
-        <Link to="/home">
+        <Link to="/home" onClick={playAccent}>
           <p className="mt-4 underline sm:text-[16px] text-[12px] underline-offset-4 z-10 relative text-indigo-400">
             Back to menu
           </p>

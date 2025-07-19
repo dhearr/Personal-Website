@@ -134,6 +134,7 @@ import useSound from "use-sound";
 // 🎶 DAFTAR TRACK MUDAH DITAMBAH
 import backsound from "../assets/backsound.mp3";
 import backsoundCredits from "../assets/credit-sound.mp3";
+import backoundGame from "../assets/game-on.mp3";
 // contoh kalau mau nambah musik baru:
 // import backsoundAbout from "../assets/about-sound.mp3";
 
@@ -142,9 +143,7 @@ import clickSfx from "../assets/accent.mp3";
 const tracks = {
   main: backsound,
   credits: backsoundCredits,
-  // tinggal tambah:
-  // about: backsoundAbout,
-  // blog: backsoundBlog,
+  game: backoundGame,
 };
 
 const SoundManagerContext = createContext();
@@ -269,6 +268,19 @@ export function SoundManagerProvider({ children }) {
     }
   };
 
+  const changeTrack = (key) => {
+    const newSrc = tracks[key];
+    if (!newSrc || !audioRef.current) return;
+    audioRef.current.pause();
+    audioRef.current.src = newSrc;
+    audioRef.current.load();
+    audioRef.current.volume = musicVolume;
+    setCurrentTrack(key);
+    if (isMusicOn) {
+      audioRef.current.play().catch(() => {});
+    }
+  };
+
   return (
     <SoundManagerContext.Provider
       value={{
@@ -283,6 +295,7 @@ export function SoundManagerProvider({ children }) {
         setAccentVolume,
         playAccent,
         forcePlay,
+        changeTrack,
       }}
     >
       {children}

@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { blogs } from "../data";
-import { GoArrowLeft } from "react-icons/go";
 import { MdDateRange } from "react-icons/md";
+import { useSoundManager } from "../utils/soundManager";
 
 const Detail = () => {
   const { id } = useParams();
@@ -17,6 +17,7 @@ const Detail = () => {
     paragrap5,
     footer,
   } = blog;
+  const { playAccent } = useSoundManager();
 
   return (
     <>
@@ -26,10 +27,8 @@ const Detail = () => {
           <Link
             to="/blogs"
             className="inline-flex items-center text-indigo-400 text-sm"
+            onClick={playAccent}
           >
-            <span className="text-lg inline-flex mr-1">
-              <GoArrowLeft />
-            </span>
             Kembali
           </Link>
           {/* End Button Back */}
