@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useSoundManager } from "../utils/soundManager";
+import runIcon from "/src/assets/run.gif";
 
 export default function ModalLevelSelect({ onSelect, unlockedLevels }) {
   const { playAccent } = useSoundManager();
@@ -19,6 +20,17 @@ export default function ModalLevelSelect({ onSelect, unlockedLevels }) {
 
       {/* Modal Box */}
       <div className="relative bg-[#091F2A] border-4 border-[#006ba1] p-6 shadow-xl w-[90%] max-w-md text-center">
+        <div className="absolute -top-14 left-0 w-full overflow-hidden h-12">
+          <div className="flex animate-run-loop">
+            <img src={runIcon} alt="run-icon" className="w-12 h-12" />
+            <img
+              src={runIcon}
+              alt="run-icon"
+              className="w-12 h-12 ml-[calc(100%-3rem)]"
+            />
+          </div>
+        </div>
+
         <h2 className="text-white pixel-text text-lg mb-4">Pilih Level</h2>
 
         <div className="flex flex-col gap-3">

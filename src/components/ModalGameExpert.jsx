@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useSoundManager } from "../utils/soundManager";
+import caracter from "/src/assets/caracter-1.gif";
 
 export default function ModalGameExpert({ onClose, onSuccess, onFail }) {
   const { playAccent } = useSoundManager();
@@ -82,6 +83,11 @@ export default function ModalGameExpert({ onClose, onSuccess, onFail }) {
       <div className="absolute inset-0 bg-black bg-opacity-10"></div>
 
       <div className="relative bg-[#091F2A] border-4 border-[#006ba1] p-6 shadow-xl w-[90%] max-w-lg text-center">
+        <img
+          src={caracter}
+          alt="caracter"
+          className="absolute -top-14 left-0 w-12 h-12"
+        />
         <h2 className="text-white pixel-text text-lg mb-2">
           🧩 Pattern Memory
         </h2>

@@ -99,3 +99,17 @@ input[type="number"] {
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+@keyframes runLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-run-loop {
+  width: calc(200%); /* cukup luas buat 2 icon */
+  animation: runLoop 10s linear infinite;
+}
