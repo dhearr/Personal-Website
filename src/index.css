@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +9,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Press Start 2P", cursive;
   scroll-behavior: smooth;
   color-scheme: dark;
 }
@@ -26,3 +28,61 @@
     opacity: 0;
   }
 }
+
+.pixel-text {
+  font-family: "Press Start 2P", cursive;
+  letter-spacing: 2px;
+}
+
+.pixel-art {
+  image-rendering: pixelated;
+}
+
+/* Hilangkan spinner di Chrome, Safari, Edge, dll berbasis WebKit */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hilangkan spinner di Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/*  */
+
+/* di file css/tailwind.css atau file style terpisah */
+.eightbit-btn {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.eightbit-btn:hover {
+}
+
+.eightbit-btn:active {
+}
+
+.eightbit-btn::before,
+.eightbit-btn::after {
+  content: "";
+  position: absolute;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+}
+
+/*  */
+/* .swal8bit-popup {
+  image-rendering: pixelated;
+  background: #222 !important;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 4px #000;
+  border-radius: 0 !important;
+  font-family: "Press Start 2P", cursive;
+  color: #00ff00;
+  text-align: center;
+} */

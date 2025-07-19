@@ -5,19 +5,27 @@ export const menuLinks = [
   },
   {
     id: "work",
-    title: "Work Experience",
+    title: "Experience",
+  },
+  {
+    id: "setting",
+    title: "Setting",
   },
   {
     id: "project",
-    title: "My project",
+    title: "Project",
   },
   {
     id: "contact",
-    title: "Contact me",
+    title: "Contact",
   },
   {
     id: "blogs",
-    title: "My Blog",
+    title: "Blog",
+  },
+  {
+    id: "credits",
+    title: "Credits",
   },
 ];
 

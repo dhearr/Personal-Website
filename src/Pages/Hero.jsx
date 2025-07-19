@@ -1,36 +1,28 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { author } from "../data";
 import Clock from "../components/Clock";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { styles } from "../styles";
+import { useSoundManager } from "../utils/soundManager";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
-  // Toast Notify
-  const notify = () => {
-    toast.info("Welcome to the house ", {
-      icon: "👋",
-      position: "top-left",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
+  const { forcePlay, playAccent } = useSoundManager();
+  const navigate = useNavigate();
+
+  const handleStartClick = () => {
+    forcePlay();
+    playAccent();
+    navigate("/home", { state: { showModal: true } });
   };
 
   return (
     <section className={styles.sectionHero}>
       <div className={styles.wrapperHero}>
-        {/* Start Clock */}
+        {/* Clock */}
         <div className="absolute top-5 right-5 sm:right-10">
           <Clock />
         </div>
-        {/* End Clock */}
-        {/* Start Name Logo */}
+        {/* Name Logo */}
         <motion.div
           initial={{ y: -20 }}
           animate={{ y: 0 }}
@@ -38,23 +30,18 @@ export default function Hero() {
           className="max-w-sm sm:max-w-xl text-center"
         >
           <h1 className={styles.authorName}>{author.name}</h1>
-          <h2 className={styles.authorTitle}>{author.title}</h2>
         </motion.div>
-        {/* End Name Logo */}
-        {/* Start Button */}
-        <Link to="/home">
-          <button
-            onClick={notify}
-            className="animates mt-10 text-[18px] sm:text-[28px] font-rubik cursor-pointer text-center"
-          >
-            - Click to Start -
-          </button>
-        </Link>
-        {/* End Button */}
+        {/* Tombol Start */}
+        <button
+          onClick={handleStartClick}
+          className="animates mt-10 text-xs sm:text-sm pixel-text cursor-pointer text-center"
+        >
+          - Click to Start -
+        </button>
       </div>
-      {/* Start Background Gradient */}
+
+      {/* Background Gradient */}
       <div className={styles.bgGradient}></div>
-      {/* End Background Gradient */}
     </section>
   );
 }

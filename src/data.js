@@ -89,4 +89,43 @@ const contacts = {
   ],
 };
 
-export { blogs, author, self, experience, work, contacts };
+const credits = [
+  {
+    title: "Developer",
+    name: "DHEA RAMDANI",
+  },
+  {
+    title: "Designer",
+    name: "DHEA RAMDANI",
+  },
+  {
+    title: "Backsound Music",
+    name: "Pixabay, Gaming Sound FX",
+  },
+  {
+    title: "Sound Effects",
+    name: "Pixabay",
+  },
+  {
+    title: "Assets Provider",
+    name: "Piskel, Animated GIF Maker",
+  },
+  {
+    title: "Fonts Provider",
+    name: "Google Fonts",
+  },
+  {
+    title: "Enggine/Libraries",
+    name: "ReactJS, Framer Motion, TailwiindCss, ViteJS, Vercel, Github",
+  },
+  {
+    title: "Sponsor",
+    name: "Mamah Bapa Tercinta",
+  },
+  {
+    title: "Special Thanks",
+    name: "Web Programing Unpas, Dea Afrizal, Helmi Satria, ChatGPT, DeanKT, dan seseorang yang sudah dengan yang lain:(",
+  },
+];
+
+export { blogs, author, self, experience, work, contacts, credits };

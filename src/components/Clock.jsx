@@ -13,7 +13,7 @@ const Clock = () => {
 
   return (
     <>
-      <h1 className="font-rubik">{currentTime}</h1>
+      <h1 className="pixel-text text-[8px]">{currentTime}</h1>
     </>
   );
 };
