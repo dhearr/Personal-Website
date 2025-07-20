@@ -1,18 +1,26 @@
 import { motion } from "framer-motion";
 import { credits } from "../data";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSoundManager } from "../utils/soundManager";
 import ModalInfo from "../components/Modal-Info";
 
 export default function Credits() {
   const { playMusic, stopMusic } = useSoundManager();
   const [showModal, setShowModal] = useState(false);
+  const containerRef = useRef(null);
+  const [distance, setDistance] = useState(0);
 
   useEffect(() => {
     // Hentikan audio apapun dulu
     stopMusic();
     // Mainkan musik credits
     playMusic("credits");
+
+    if (containerRef.current) {
+      const contentHeight = containerRef.current.scrollHeight; // total tinggi konten
+      const viewportHeight = window.innerHeight; // tinggi layar
+      setDistance(contentHeight + viewportHeight); // geser setinggi konten + layar
+    }
 
     // cegah tombol back
     const handlePopState = () => {
@@ -21,16 +29,11 @@ export default function Credits() {
     window.history.pushState(null, "", window.location.href);
     window.addEventListener("popstate", handlePopState);
 
-    const timer = setTimeout(() => {
-      setShowModal(true);
-    }, 55000);
-
     return () => {
       // ketika keluar dari credits
       stopMusic();
       playMusic("main");
       window.removeEventListener("popstate", handlePopState);
-      clearTimeout(timer);
     };
   }, []);
 
@@ -52,11 +55,20 @@ export default function Credits() {
 
       {/* konten credits */}
       <motion.div
+        ref={containerRef}
+        // initial tetap dari bawah
         initial={{ y: "100%" }}
-        animate={{ y: "-300%" }}
+        // kalau distance belum siap, animasi cuma diam (ke 100%),
+        // kalau sudah siap, animasi jalan ke atas sejauh distance
+        animate={distance > 0 ? { y: `-${distance}px` } : { y: "100%" }}
         transition={{
-          duration: 80,
+          duration: 50,
           ease: "linear",
+        }}
+        onAnimationComplete={() => {
+          if (distance > 0) {
+            setShowModal(true);
+          }
         }}
         className="flex flex-col items-center max-w-2xl space-y-6 text-xs md:text-sm px-6"
       >

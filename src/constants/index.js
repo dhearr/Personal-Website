@@ -27,6 +27,10 @@ export const menuLinks = [
     id: "credits",
     title: "Credits",
   },
+  {
+    id: "",
+    title: "Exit",
+  },
 ];
 
 const experiences = [

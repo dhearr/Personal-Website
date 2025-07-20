@@ -16,7 +16,7 @@ export default function Home() {
   const location = useLocation();
   const { state } = location;
   const [showModal, setShowModal] = useState(false);
-  const { playAccent } = useSoundManager();
+  const { playAccent, stopMusic } = useSoundManager();
 
   // cek state dari navigate
   useEffect(() => {
@@ -86,12 +86,17 @@ export default function Home() {
               animate="visible"
             >
               {menuLinks.map((menu) => (
-                <Link key={menu.id} to={`/${menu.id}`}>
-                  <motion.li
-                    variants={item()}
-                    className={styles.menuTitle}
-                    onClick={playAccent}
-                  >
+                <Link
+                  key={menu.id}
+                  to={`/${menu.id}`}
+                  onClick={() => {
+                    playAccent();
+                    if (menu.title === "Exit") {
+                      stopMusic(); // 🔥 berhentikan musik ketika klik Exit
+                    }
+                  }}
+                >
+                  <motion.li variants={item()} className={styles.menuTitle}>
                     <span className={styles.arrowTitle}>
                       <BsCaretRight />
                     </span>
